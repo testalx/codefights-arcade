@@ -1,0 +1,15 @@
+bool isLucky(int n) {
+int s1=0,s2=0,k=1;;
+int nrc=(int)log10(n)+1;
+while(n&&k<=nrc/2)
+{
+s1+=n%10;    
+n/=10;
+k++;
+}
+while(n)
+{s2+=n%10;
+n/=10;}
+//cout<<"s1="<<s1<<" s2="<<s2;
+return s1==s2;
+}
