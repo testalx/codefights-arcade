@@ -1,4 +1,5 @@
-bool areEquallyStrong(int yourLeft, int yourRight, int friendsLeft, int friendsRight) {
+bool areEquallyStrong(int yourLeft, int yourRight, int friendsLeft, int friendsRight) 
+{
 int ma,mi,fma,fmi;
 if(yourLeft>yourRight)
 {ma=yourLeft;mi=yourRight;}
