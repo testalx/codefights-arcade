@@ -1,0 +1,13 @@
+
+bool areEquallyStrong(int yourLeft, int yourRight, int friendsLeft, int friendsRight) {
+int ma,mi,fma,fmi;
+if(yourLeft>yourRight)
+{ma=yourLeft;mi=yourRight;}
+else
+{ma=yourRight;mi=yourLeft;}
+if(friendsLeft>friendsRight)
+{fma=friendsLeft;fmi=friendsRight;}
+else
+{fma=friendsRight;fmi=friendsLeft;}
+return ma==fma && mi==fmi;
+}
