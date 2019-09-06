@@ -1,0 +1,15 @@
+int matrixElementsSum(std::vector<std::vector<int>> matrix) {
+int i,j,s=0,m=matrix.size(),n=matrix[0].size();
+for(i=0;i<m;i++)
+{for(j=0;j<n;j++)
+    cout<<matrix[i][j]<<' ';
+cout<<endl;}
+//se rezolva facand suma PE COLOANE PANA la intalnirea lui 0. se sare apoi la urmatoarea coloana (break in for sau ceva de genul asta)
+for(i=0;i<n;i++)
+    for(j=0;j<m;j++)
+    {s+=matrix[j][i];
+        if(!matrix[j][i])
+            break;
+}
+return s;
+}
