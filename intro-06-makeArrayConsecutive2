@@ -1,0 +1,8 @@
+int makeArrayConsecutive2(std::vector<int> statues) {
+sort(statues.begin(),statues.end());
+int i,n=statues.size(),k=0;
+for(i=1;i<n;i++)
+    //cout<<statues[i]<<' ';
+    k+=statues[i]-statues[i-1]-1;
+return k;
+}
