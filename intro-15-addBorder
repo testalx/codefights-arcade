@@ -1,0 +1,12 @@
+std::vector<std::string> addBorder(std::vector<std::string> picture) {
+int n=picture[0].length();
+string a(n+2,'*');
+picture.insert(picture.begin(),a);
+for(unsigned i=1;i<picture.size();i++)
+{
+    picture[i].insert(picture[i].begin(),'*');
+    picture[i].push_back('*');
+}
+picture.push_back(a);
+return picture;
+}
