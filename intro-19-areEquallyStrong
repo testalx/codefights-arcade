@@ -1,4 +1,3 @@
-
 bool areEquallyStrong(int yourLeft, int yourRight, int friendsLeft, int friendsRight) {
 int ma,mi,fma,fmi;
 if(yourLeft>yourRight)
