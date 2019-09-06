@@ -1,0 +1,9 @@
+bool areSimilar(std::vector<int> A, std::vector<int> B) {
+int d=0,a,b,i,n=A.size();
+for(i=0;i<n;i++)
+ if(A[i]!=B[i])
+ {d++;a=i;}
+sort(A.begin(),A.end());
+sort(B.begin(),B.end());
+return (d==0 || d==2) && A==B;
+}
