@@ -1,0 +1,19 @@
+int commonCharacterCount(std::string s1, std::string s2) {
+vector<int>v1(150,0),v2(150,0);
+unsigned i,n,k=0;
+n=s1.size();
+for(i=0;i<n;i++)
+    v1[s1[i]]++;
+n=s2.size();
+for(i=0;i<n;i++)
+    v2[s2[i]]++;
+for(char c='a';c<='z';c++)
+{cout<<v1[c]<<' '<<v2[c]<<endl;
+    if(v1[c]&&v2[c])
+        if(v2[c]>v1[c])
+            k+=v1[c];
+        else 
+            k+=v2[c];
+}
+return k;
+}
