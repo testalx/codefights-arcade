@@ -9,3 +9,10 @@ if(d>m)
 }
 return m;
 }
+/*
+//un pic mai putin de scris si mai eficient :D
+int x=v[0],m=-999;
+for(int y:v)
+  m=max(m,(x>y?x-y:y-x)),x=y;
+return m;
+*/
