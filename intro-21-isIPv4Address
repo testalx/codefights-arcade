@@ -1,0 +1,29 @@
+int n,k,i,c,gol,isIPv4Address(string s) {
+ 
+  gol = 1;
+  
+  s += '.';
+
+  for (i = 0; i < s.size(); i++) {
+    if (s[i] == '.') {
+      if (gol) {
+        return 0;
+      }
+      k++;
+      n = 0;
+      gol = 1;
+    }
+    else {
+      c = s[i] - '0';
+      if (c < 0 || c > 9) 
+        return 0;
+      
+      gol = 0;
+      n = n * 10 + c;
+      if (n > 255) 
+        return 0;
+      
+    }
+  }
+  return k == 4;
+}
