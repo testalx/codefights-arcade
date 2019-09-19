@@ -1,0 +1,12 @@
+int avoidObstacles(std::vector<int> inputArray) {
+//trebuie gasit un nr cu care niciun el din vector sa hie divizibil
+int d=2,ok=0,i,n=inputArray.size();
+while(d<41)
+{ok=1;
+ for(i=0;i<n;i++)
+  if(inputArray[i]%d==0){ok=0;break;}
+ if(ok)break;
+ d++;   
+}
+return d;
+}
