@@ -1,0 +1,9 @@
+int differentSymbolsNaive(std::string s) {
+vector<int>v(26,0);
+int i,k=0;
+for(i=0;i<s.size();i++)
+    v[s[i]-'a']++;
+for(i=0;i<26;i++)
+    if(v[i]) k++;
+return k;
+}
