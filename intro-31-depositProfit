@@ -1,0 +1,8 @@
+int depositProfit(int deposit, int rate, int threshold) {
+int k=0;
+float x=deposit;
+while(x<threshold-1e-7)
+{  x+=x*rate/100;
+k++;}
+return k;
+}
