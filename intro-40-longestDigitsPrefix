@@ -1,0 +1,7 @@
+std::string longestDigitsPrefix(std::string inputString) {
+string a;
+int i=0;
+while(i<inputString.size()&&inputString[i]>='0'&&inputString[i]<='9')
+    a.push_back(inputString[i++]);
+return a;
+}
