@@ -1,0 +1,9 @@
+bool bishopAndPawn(std::string bishop, std::string pawn) {
+int l1,l2,c1,c2;
+l1=bishop[0]-96;
+c1=bishop[1]-'1';
+l2=pawn[0]-96;
+c2=pawn[1]-'1';
+cout<<"l1="<<l1<<" c1="<<c1<<" l2="<<l2<<" c2="<<c2<<endl;
+return abs(l1-l2)==abs(c1-c2);
+}
