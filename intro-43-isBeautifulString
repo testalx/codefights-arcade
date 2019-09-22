@@ -1,0 +1,8 @@
+bool isBeautifulString(std::string inputString) {
+vector<int>v(26,0);
+for(int i=0;i<inputString.size();i++)
+    v[inputString[i]-'a']++;
+for(int i=0;i<25;i++)
+    if(v[i]<v[i+1]) return 0;
+return 1;
+}
