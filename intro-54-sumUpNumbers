@@ -1,0 +1,19 @@
+int sumUpNumbers(std::string inputString) {
+int i=0,s=0;
+string cuv;
+while(i<inputString.size())
+{
+    while(inputString[i]<'0'||inputString[i]>'9')
+        i++;
+
+if(i>=inputString.size()) break;//din cauza ultimului NULL
+    cuv.clear();
+    while(inputString[i]>='0'&&inputString[i]<='9')
+    cuv.push_back(inputString[i++]);
+cout<<cuv<<" i="<<i<<endl;
+   s+=stoi(cuv);
+
+}
+
+return s; 
+}
