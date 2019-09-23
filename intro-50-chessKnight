@@ -1,0 +1,38 @@
+int chessKnight(std::string cell) {
+int c=cell[0]-96,l=cell[1]-'0';
+cout<<l<<' '<<c<<endl;
+if(l==1||l==8)
+{
+ if(c==1||c==8)
+     return 2;
+if(c==2||c==7)
+    return 3;
+return 4;
+}
+if(l==2||l==7)
+{
+    if(c==1||c==8)
+        return 3;
+    if(c==2||c==7)
+        return 4;
+    return 6;
+}
+swap(l,c);   //asta ca sa nu mai scriu inca o data toate kkt de teste
+if(l==1||l==8)
+{
+ if(c==1||c==8)
+     return 2;
+if(c==2||c==7)
+    return 3;
+return 4;
+}
+if(l==2||l==7)
+{
+    if(c==1||c==8)
+        return 3;
+    if(c==2||c==7)
+        return 4;
+    return 6;
+}
+return 8;
+}
