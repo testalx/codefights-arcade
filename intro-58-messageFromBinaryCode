@@ -1,0 +1,25 @@
+int numar(string s)//preia sirul de 8 biti si ret numarul
+{// cout<<"\nPrelucram nr"<<s; 
+ int nr=0,p=1;
+ for(int i=7;i>=0;i--)  
+ {
+  nr=nr+(s[i]-'0')*p;
+ p*=2;
+ } 
+return nr;
+}
+
+std::string messageFromBinaryCode(std::string code) {
+int i=0,k,n=code.size();
+string nr,raspuns;
+while(i<n)
+{
+ nr.clear();
+ for(k=0;k<8;k++)
+ nr.push_back(code[i++]);
+// cout<<endl<<nr<<':'<<numar(nr)<<endl;
+char c=numar(nr);
+raspuns.push_back(c);
+}
+return raspuns;
+}
