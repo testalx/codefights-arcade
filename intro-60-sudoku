@@ -1,0 +1,36 @@
+bool noua(vector<vector<int>>a,int x,int y)
+{
+//    verificam doar zona de 3x3 x->x+2,y->y+2 daca contine toate nr de la 1 la 9
+  //  cout<<"\nVerificam patratul "<<x<<' '<<y;
+vector<int>v(10,0);
+for(int i=0;i<3;i++)
+    for(int j=0;j<3;j++)
+        v[a[x+i][y+j]]++;
+for(int i=1;i<10;i++)
+    if(!v[i]) return 0;
+return 1;
+}
+
+bool sudoku(std::vector<std::vector<int>> grid) {
+int a,b;
+for(a=0;a<9;a+=3)
+    for(b=0;b<9;b+=3)
+        if(!noua(grid,a,b))
+            return 0;
+//acu verificam toate liniile si toate coloanele
+
+for(a=0;a<9;a++)
+{vector<int>v(10,0);
+for(b=0;b<9;b++)
+    v[grid[a][b]]++;
+for(b=1;b<10;b++)
+    if(!v[b])
+        return 0;
+vector<int>w(10,0);
+for(b=0;b<9;b++)
+    w[grid[b][a]]++;
+for(b=1;b<10;b++)
+    if(!w[b]) return 0;
+}
+return 1;
+}
