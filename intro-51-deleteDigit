@@ -1,0 +1,18 @@
+int deleteDigit(int n) {
+vector<int>v,a;
+int i,nmax=0;
+if(n<10) return 0;
+while(n)
+{v.push_back(n%10);
+n/=10;
+}
+for(i=0;i<v.size();i++)
+{ a=v;int nr=0,j;
+  a.erase(a.begin()+i);
+  for(j=a.size()-1;j>=0;j--)
+    nr=nr*10+a[j];
+  if(nr>nmax)
+    nmax=nr;
+}
+return nmax;
+}
