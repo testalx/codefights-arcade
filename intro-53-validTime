@@ -1,0 +1,12 @@
+bool validTime(std::string time) {
+string ora,min;
+ora+=time[0];
+ora+=time[1];
+min+=time[3];
+min+=time[4];
+//cout<<ora<<':'<<min<<endl;;
+int h=stoi(ora),m=stoi(min);
+if(h<0||h>23)return 0;
+if(m<0||m>59) return 0;
+return 1;
+}
