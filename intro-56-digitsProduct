@@ -1,0 +1,10 @@
+int digitsProduct(int product) {
+int x=1;
+while(x<9999)
+{  int a=x,p=1;
+    while(a){p*=a%10;a/=10;}
+    if(p==product) return x;
+    x++;
+}
+return -1;
+}
