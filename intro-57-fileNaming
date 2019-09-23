@@ -1,0 +1,27 @@
+std::vector<std::string> fileNaming(std::vector<std::string> names) {
+int i=0,j,n=names.size(),k;
+for(;i<n-1;i++)
+{
+    k=0;
+    for(j=i+1;j<n;j++)
+        if(names[i]==names[j])
+        {
+            k++;
+            names[j].push_back('(');
+            if(k<10)
+            names[j].push_back(k+'0');
+            else {
+                 names[j].push_back(k/10+'0');
+                 names[j].push_back(k%10+'0');
+            }
+            names[j].push_back(')');
+            for(int ii=0;ii<j;ii++)
+                if(names[j]==names[ii])
+                {
+                    k++;
+                    names[j][names[j].size()-2]++;;
+                }
+        }
+}
+return names;
+}
